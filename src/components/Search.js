@@ -1,6 +1,11 @@
 import { Box } from '@mui/material';
 
 function Searchbar() {
+
+  const RecipeContext = React.createContext({
+    ingredients: [],
+    addIngredient: ()
+  })
   return (
     <Box
       sx={{
