@@ -41,6 +41,9 @@ export default Searchbar;
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [
-  { ingredient: "The Shawshank Redemption", year: 1994 },
-  { title: "The Godfather", year: 1972 },
+  { ingredient: "broccoli", type: "vegetable" },
+  { ingredient: "carrot", type: "vegetable" },
+  { ingredient: "potato", type: "vegetable" },
+  { ingredient: "onion", type: "vegetable" },
+  { ingredient: "garlic", type: "vegetable" },
 ];
