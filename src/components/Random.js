@@ -8,7 +8,7 @@ function Random() {
   }, []);
 
   const limit = 10;
-  const key = 'd5d1d457c1004156ac6fb0b793d29cc9';
+  const key = process.env.REACT_APP_SPOON;
   const getRandom = async () => {
     const api = await fetch(
       `https://api.spoonacular.com/recipes/random?apiKey=${key}&number=${limit}`
