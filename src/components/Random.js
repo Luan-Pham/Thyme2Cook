@@ -8,6 +8,7 @@ import {
   Typography,
   CardActions,
   Collapse,
+  Stack,
 } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -37,19 +38,33 @@ function Random() {
 
   const limit = 5;
   const key = process.env.REACT_APP_SPOON;
+
   const getRandom = async () => {
-    const api = await fetch(
-      `https://api.spoonacular.com/recipes/random?apiKey=${key}&number=${limit}`
-    );
-    const data = await api.json();
-    console.log(data);
-    setRandom(data.recipes);
+    const check = localStorage.getItem('random');
+    if (check) {
+      setRandom(JSON.parse(check));
+    } else {
+      const api = await fetch(
+        `https://api.spoonacular.com/recipes/random?apiKey=${key}&number=${limit}`
+      );
+      const data = await api.json();
+      localStorage.setItem('random', JSON.stringify(data.recipes));
+      console.log(data);
+      setRandom(data.recipes);
+    }
   };
   return (
-    <div>
+    <Stack
+      sx={{
+        display: 'inline-flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-evenly',
+      }}
+    >
       {random.map((recipe) => {
         return (
-          <Card sx={{ maxWidth: 345 }} key={recipe.id}>
+          <Card sx={{ maxWidth: 400, margin: 2 }} key={recipe.id}>
             <CardHeader title={recipe.title} />
             <CardMedia
               component="img"
@@ -87,7 +102,7 @@ function Random() {
           </Card>
         );
       })}
-    </div>
+    </Stack>
   );
 }
 
