@@ -36,7 +36,7 @@ function Random() {
     getRandom();
   }, []);
 
-  const limit = 5;
+  const limit = 10;
   const key = process.env.REACT_APP_SPOON;
 
   const getRandom = async () => {

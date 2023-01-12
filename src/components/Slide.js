@@ -10,7 +10,7 @@ function Slide() {
     getSlide();
   }, []);
 
-  const limit = 5;
+  const limit = 10;
   const key = process.env.REACT_APP_SPOON;
 
   const getSlide = async () => {
@@ -32,7 +32,7 @@ function Slide() {
       options={{
         rewind: true,
         gap: '3rem',
-        perPage: 3,
+        perPage: 4,
         pagination: false,
         drag: 'free',
         breakpoints: {
