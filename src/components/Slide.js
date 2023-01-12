@@ -28,31 +28,40 @@ function Slide() {
     }
   };
   return (
-    <Splide
-      options={{
-        rewind: true,
-        gap: '3rem',
-        perPage: 4,
-        pagination: false,
-        drag: 'free',
-        breakpoints: {
-          640: {
-            perPage: 1,
+    <Container>
+      <h3> Try these recipes!</h3>
+      <Splide
+        options={{
+          rewind: true,
+          gap: '2rem',
+          perPage: 4,
+          pagination: false,
+          drag: 'free',
+          breakpoints: {
+            2050: { perPage: 3 },
+            1500: { perPage: 2 },
+            640: {
+              perPage: 1,
+            },
           },
-        },
-      }}
-      aria-label="My Favorite Images"
-    >
-      {slide.map((recipe) => {
-        return (
-          <SplideSlide>
-            <p> {recipe.title}</p>
-            <img src={recipe.image} alt={recipe.title} />
-          </SplideSlide>
-        );
-      })}
-    </Splide>
+        }}
+        aria-label="My Favorite Images"
+      >
+        {slide.map((recipe) => {
+          return (
+            <SplideSlide>
+              <p> {recipe.title}</p>
+              <img src={recipe.image} alt={recipe.title} />
+            </SplideSlide>
+          );
+        })}
+      </Splide>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  margin: 4 rem 0 rem;
+`;
 
 export default Slide;
