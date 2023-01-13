@@ -1,49 +1,44 @@
-import * as React from "react";
-import TextField from "@mui/material/TextField";
-import Autocomplete from "@mui/material/Autocomplete";
-import { Box } from "@mui/material";
+import { InputLabel, FilledInput, FormControl } from '@mui/material';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
 function Searchbar() {
+  const [input, setInput] = useState('');
+  const navigate = useNavigate();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    navigate('/recipe/' + input);
+  };
+
   return (
-    <Box
-      sx={{
-        height: 300,
-        width: "100%",
-      }}
-    >
-      <Autocomplete
-        id="free-solo-demo"
-        freeSolo
-        options={top100Films.map((option) => option.title)}
-        renderInput={(params) => <TextField {...params} label="freeSolo" />}
-      />
-      <Autocomplete
-        freeSolo
-        id="free-solo-2-demo"
-        disableClearable
-        options={top100Films.map((option) => option.title)}
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            label="Search input"
-            InputProps={{
-              ...params.InputProps,
-              type: "search",
-            }}
+    <Form onSubmit={submitHandler}>
+      <div>
+        <FormControl fullWidth sx={{ m: 1 }} variant="filled">
+          <InputLabel>
+            Search for a recipe by ingredient, cuisine, diet, equipment, etc.
+          </InputLabel>
+          <FilledInput
+            onChange={(e) => setInput(e.target.value)}
+            type="text"
+            value={input}
           />
-        )}
-      />
-    </Box>
+        </FormControl>
+      </div>
+    </Form>
   );
 }
 
 export default Searchbar;
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-const top100Films = [
-  { ingredient: "broccoli", type: "vegetable" },
-  { ingredient: "carrot", type: "vegetable" },
-  { ingredient: "potato", type: "vegetable" },
-  { ingredient: "onion", type: "vegetable" },
-  { ingredient: "garlic", type: "vegetable" },
-];
+const Form = styled.form`
+  margin: 0rem 20rem;
+
+  div {
+    width: 100%;
+    position: relative;
+  }
+`;
+
+// https://api.spoonacular.com/recipes/complexSearch

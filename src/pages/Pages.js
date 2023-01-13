@@ -1,14 +1,14 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './Home';
+import Recipe from './Recipe';
 
 function Pages() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/recipe/:recipe" element={<Recipe />} />
+    </Routes>
   );
 }
 

@@ -49,7 +49,7 @@ function Slide() {
       >
         {slide.map((recipe) => {
           return (
-            <SplideSlide>
+            <SplideSlide key={recipe.id}>
               <p> {recipe.title}</p>
               <img src={recipe.image} alt={recipe.title} />
             </SplideSlide>
