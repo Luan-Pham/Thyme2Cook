@@ -50,8 +50,10 @@ function Slide() {
         {slide.map((recipe) => {
           return (
             <SplideSlide key={recipe.id}>
-              <p> {recipe.title}</p>
-              <img src={recipe.image} alt={recipe.title} />
+              <Card>
+                <p> {recipe.title}</p>
+                <img src={recipe.image} alt={recipe.title} />
+              </Card>
             </SplideSlide>
           );
         })}
@@ -62,6 +64,17 @@ function Slide() {
 
 const Container = styled.div`
   margin: 4 rem 0 rem;
+`;
+
+const Card = styled.div`
+  min-heightl: 25rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    border-radius: 30px;
+  }
 `;
 
 export default Slide;
