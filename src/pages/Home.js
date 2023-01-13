@@ -4,7 +4,6 @@ import React from 'react';
 function Home() {
   return (
     <div>
-      {/* <Random /> */}
       <Slide />
     </div>
   );
