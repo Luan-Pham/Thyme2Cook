@@ -2,6 +2,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 function Slide() {
   const [slide, setSlide] = useState([]);
@@ -51,8 +52,10 @@ function Slide() {
           return (
             <SplideSlide key={recipe.id}>
               <Card>
-                <p> {recipe.title}</p>
-                <img src={recipe.image} alt={recipe.title} />
+                <Link to={'/instructions/' + recipe.id}>
+                  <p> {recipe.title}</p>
+                  <img src={recipe.image} alt={recipe.title} />
+                </Link>
               </Card>
             </SplideSlide>
           );
@@ -74,6 +77,21 @@ const Card = styled.div`
 
   img {
     border-radius: 30px;
+  }
+  p {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, 0%);
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2rem;
+    height: 50%;
+    display: flex;
+    justify-content: center;
   }
 `;
 
