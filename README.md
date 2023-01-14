@@ -15,7 +15,7 @@ Application that helps the user decide waht to cook whenever they need some insp
 
   ## Usage
 
-  Visit "LINK HERE"
+  Visit <a href="https://luan-pham.github.io/Thyme2Cook/"> Thyme2Cook </a> to use the app!
 
   ## License
 
