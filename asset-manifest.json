@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.86769cf7.css",
-    "main.js": "./static/js/main.8efce184.js",
-    "static/js/787.0ebfa276.chunk.js": "./static/js/787.0ebfa276.chunk.js",
-    "index.html": "./index.html",
-    "main.86769cf7.css.map": "./static/css/main.86769cf7.css.map",
-    "main.8efce184.js.map": "./static/js/main.8efce184.js.map",
-    "787.0ebfa276.chunk.js.map": "./static/js/787.0ebfa276.chunk.js.map"
+    "main.css": "/Thyme2Cook/static/css/main.86769cf7.css",
+    "main.js": "/Thyme2Cook/static/js/main.2d384137.js",
+    "static/js/787.0ebfa276.chunk.js": "/Thyme2Cook/static/js/787.0ebfa276.chunk.js",
+    "index.html": "/Thyme2Cook/index.html",
+    "main.86769cf7.css.map": "/Thyme2Cook/static/css/main.86769cf7.css.map",
+    "main.2d384137.js.map": "/Thyme2Cook/static/js/main.2d384137.js.map",
+    "787.0ebfa276.chunk.js.map": "/Thyme2Cook/static/js/787.0ebfa276.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.86769cf7.css",
-    "static/js/main.8efce184.js"
+    "static/js/main.2d384137.js"
   ]
 }
