@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Luan-Pham/Thyme2Cook/static/css/main.86769cf7.css",
+    "main.js": "/Luan-Pham/Thyme2Cook/static/js/main.414f8b37.js",
+    "static/js/787.0ebfa276.chunk.js": "/Luan-Pham/Thyme2Cook/static/js/787.0ebfa276.chunk.js",
+    "index.html": "/Luan-Pham/Thyme2Cook/index.html",
+    "main.86769cf7.css.map": "/Luan-Pham/Thyme2Cook/static/css/main.86769cf7.css.map",
+    "main.414f8b37.js.map": "/Luan-Pham/Thyme2Cook/static/js/main.414f8b37.js.map",
+    "787.0ebfa276.chunk.js.map": "/Luan-Pham/Thyme2Cook/static/js/787.0ebfa276.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86769cf7.css",
+    "static/js/main.414f8b37.js"
+  ]
+}
