@@ -31,7 +31,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="https://luan-pham.github.io/Thyme2Cook/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },

@@ -11,7 +11,6 @@ function App() {
       <BrowserRouter>
         <ResponsiveAppBar />
         <Searchbar />
-        <Home />
         <Pages />
       </BrowserRouter>
     </Box>

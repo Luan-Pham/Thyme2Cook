@@ -7,7 +7,7 @@ import Recipe from './Recipe';
 function Pages() {
   return (
     <Routes>
-      <Route path="" element={<Home />} />
+      <Route path="/Thyme2Cook/" element={<Home />} />
       <Route path="/recipe/:search" element={<Recipe />} />
       <Route path="/instructions/:name" element={<Instructions />} />
     </Routes>
