@@ -10,12 +10,22 @@ Application that helps the user decide waht to cook whenever they need some insp
 
 - [Installation](#install)
 - [Usage](#usage)
-- [Credits](#contribute)
+- [Tools](#tools)
 - [License](#license)
 
   ## Usage
 
   Visit <a href="https://luan-pham.github.io/Thyme2Cook/"> Thyme2Cook </a> to use the app!
+
+  ## Tools
+
+Here are some of the tools that I used to create this portfolio.
+
+- <a href='https://reactjs.org/'> React </a>
+
+- <a href='https://mui.com/'> Material UI </a>
+
+- <a href='https://pages.github.com/'> GitHub pages </a>
 
   ## License
 
