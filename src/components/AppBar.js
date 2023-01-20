@@ -8,7 +8,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { AiFillClockCircle } from 'react-icons/ai';
-import { width } from '@mui/system';
 
 // const pages = ['Vegatarian', 'Vegan', 'Gluten Free'];
 const pages = [];
