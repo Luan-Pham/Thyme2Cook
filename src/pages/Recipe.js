@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import styled from "styled-components";
 
 function Recipe() {
   const [displayRecipes, setDisplayRecipes] = useState([]);
@@ -24,7 +24,7 @@ function Recipe() {
       {displayRecipes.map((recipe) => {
         return (
           <Card key={recipe.id}>
-            <Link to={'/instructions/' + recipe.id}>
+            <Link to={"/instructions/" + recipe.id}>
               <img src={recipe.image} alt={recipe.title} />
               <h4> {recipe.title}</h4>
             </Link>

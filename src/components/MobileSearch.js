@@ -1,6 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import {
   InputLabel,
   FilledInput,
@@ -8,16 +8,16 @@ import {
   Container,
   AppBar,
   Toolbar,
-} from '@mui/material';
-import styled from 'styled-components';
+} from "@mui/material";
+import styled from "styled-components";
 
 function MobileSearch() {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
-    navigate('/recipe/' + input);
+    navigate("/recipe/" + input);
   };
 
   return (
