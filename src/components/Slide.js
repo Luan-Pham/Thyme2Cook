@@ -1,8 +1,8 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-import { useEffect, useState } from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 function Slide() {
   const [slide, setSlide] = useState([]);
@@ -15,7 +15,7 @@ function Slide() {
   const key = process.env.REACT_APP_SPOON;
 
   const getSlide = async () => {
-    const check = localStorage.getItem("slide");
+    const check = localStorage.getItem('slide');
     if (check) {
       setSlide(JSON.parse(check));
     } else {
@@ -23,7 +23,7 @@ function Slide() {
         `https://api.spoonacular.com/recipes/random?apiKey=${key}&number=${limit}`
       );
       const data = await api.json();
-      localStorage.setItem("slide", JSON.stringify(data.recipes));
+      localStorage.setItem('slide', JSON.stringify(data.recipes));
       console.log(data);
       setSlide(data.recipes);
     }
@@ -34,10 +34,10 @@ function Slide() {
       <Splide
         options={{
           rewind: true,
-          gap: "2rem",
+          gap: '2rem',
           perPage: 4,
           pagination: false,
-          drag: "free",
+          drag: 'free',
           breakpoints: {
             2050: { perPage: 3 },
             1500: { perPage: 2 },
@@ -52,7 +52,7 @@ function Slide() {
           return (
             <SplideSlide key={recipe.id}>
               <Card>
-                <Link to={"/instructions/" + recipe.id}>
+                <Link to={'/instructions/' + recipe.id}>
                   <p> {recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
                 </Link>
@@ -70,7 +70,7 @@ const Container = styled.div`
 `;
 
 const Card = styled.div`
-  min-heightl: 25rem;
+  min-height: 25rem;
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
