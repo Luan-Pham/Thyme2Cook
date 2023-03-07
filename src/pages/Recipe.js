@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import styled from "styled-components";
+import { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 function Recipe() {
   const [displayRecipes, setDisplayRecipes] = useState([]);
@@ -24,9 +24,9 @@ function Recipe() {
       {displayRecipes.map((recipe) => {
         return (
           <Card key={recipe.id}>
-            <Link to={"/instructions/" + recipe.id}>
+            <Link to={'/instructions/' + recipe.id}>
+              <p> {recipe.title}</p>
               <img src={recipe.image} alt={recipe.title} />
-              <h4> {recipe.title}</h4>
             </Link>
           </Card>
         );
@@ -51,9 +51,14 @@ const Card = styled.div`
     text-decoration: none;
   }
 
-  h4 {
+  p {
     text-align: center;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    justify-content: center;
+    bottom: 0%;
   }
 `;
 
