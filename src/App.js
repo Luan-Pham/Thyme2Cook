@@ -4,15 +4,14 @@ import Searchbar from './components/Search';
 import Pages from './pages/Pages';
 import { BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
-import MobileSearch from './components/MobileSearch';
 
 function App() {
   return (
     <Box>
       <BrowserRouter>
-        {/* <ResponsiveAppBar /> */}
-        <MobileSearch />
+        <ResponsiveAppBar />
         <Searchbar />
+        <Home />
         <Pages />
       </BrowserRouter>
     </Box>
